@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        h1 {
+            color: #BB86FC;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(187, 134, 252, 0.8);
+        }
+        form {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 12px 0 5px;
+            font-weight: bold;
+            color: #BB86FC;
+        }
+        input{
+            padding: 12px;
+            margin-bottom: 15px;
+            width: 95%;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        select {
+            padding: 12px;
+            margin-bottom: 15px;
+            width: 98%;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        input:focus, select:focus {
+            outline: none;
+            background-color: #333;
+            box-shadow: 0 0 8px rgba(187, 134, 252, 0.8);
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #03DAC6;
+            color: #121212;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #018786;
+            transform: translateY(-2px);
+        }
+        .dynamic {
+            display: none;
+        }
+        @media (max-width: 600px) {
+            form {
+                width: 95%;
+            }
+        }
+        #hreflink {
+            text-align:right;
+        }
+    </style>
+    
+    <script>
+        function updateSubcategory() {
+            const category = document.getElementById('reservation_category').value;
+            const subcategoryContainer = document.getElementById('subcategory-container');
+            const subsubcategoryContainer = document.getElementById('subsubcategory-container');
+            const subsubcategory = document.getElementById('subsubcategory');
+
+            if (category === 'OBC') {
+                subcategoryContainer.style.display = 'block';
+            } else {
+                subcategoryContainer.style.display = 'none';
+                subsubcategoryContainer.style.display = 'none';
+                subsubcategory.value = '';
+            }
+        }
+
+        function updateSubsubcategory() {
+            const subcategoryValue = document.getElementById('subcategory').value;
+            const subsubcategoryContainer = document.getElementById('subsubcategory-container');
+
+            if (subcategoryValue === '2' || subcategoryValue === '3') {
+                subsubcategoryContainer.style.display = 'block';
+            } else {
+                subsubcategoryContainer.style.display = 'none';
+            }
+        }
+
+        window.onload = function() {
+            document.getElementById('subcategory-container').style.display = 'none';
+            document.getElementById('subsubcategory-container').style.display = 'none';
+        };
+    </script>
+</head>
+<body>
+    <h1>Find Your Eligible Colleges</h1>
+    
+    <form method="POST" action="/">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Your Full name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter UR 10 digit Phno" required>
+
+        <label for="region">Region:</label>
+        <select name="region" id="region" required>
+            <option value="" disabled selected>Do you belong to Hyderabad-Karnataka Region</option>
+            <option value="Hyd-Kar">Hyd-Kar</option>
+            <option value="Non-Hyd-Kar">Non-Hyd-Kar</option>
+        </select>
+
+        <label for="reservation_category">Reservation Category:</label>
+        <select name="reservation_category" id="reservation_category" onchange="updateSubcategory()" required>
+            <option value="" disabled selected>Select your Reservation Category</option>
+            <option value="General Merit">General Merit</option>
+            <option value="OBC">OBC</option>
+            <option value="ST">ST</option>
+            <option value="SC">SC</option>
+        </select>
+
+        <div id="subcategory-container" class="dynamic">
+            <label for="subcategory">Subcategory:</label>
+            <select name="subcategory" id="subcategory" onchange="updateSubsubcategory()">
+                <option value="" disabled selected>Select Subcategory</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+
+        <div id="subsubcategory-container" class="dynamic">
+            <label for="subsubcategory">Sub-Subcategory:</label>
+            <select name="subsubcategory" id="subsubcategory">
+                <option value="" disabled selected>Select Sub-Subcategory</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+            </select>
+        </div>
+
+        <label for="kannada_medium">Kannada Medium Reservation:</label>
+        <select name="kannada_medium" id="kannada_medium" required>
+            <option value="" disabled selected>Did you study in kannada Medium from class 1 to 10</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="rural_reservation">Rural Reservation:</label>
+        <select name="rural_reservation" id="rural_reservation" required>
+            <option value="" disabled selected>Did you study from a rural region notified in "Karnataka Act 1 of 2001"</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="cet_rank">Expected CET Rank:</label>
+        <input type="number" id="cet_rank" name="cet_rank" placeholder="Enter your expected CET Rank"required>
+
+        <label for="course">Desired Course ID:</label> <a id="hreflink" href="{{ url_for('course_info') }}">Click here for Course Code and Info</a>
+        <select id="course" name="course" required>
+            <option value="" disabled selected>Choose your interested Course code</option>
+            <option value="AD">AD</option>
+            <option value="AE">AE</option>
+            <option value="AI">AI</option>
+            <option value="AU">AU</option>
+            <option value="BT">BT</option>
+            <option value="CA">CA</option>
+            <option value="CB">CB</option>
+            <option value="CD">CD</option>
+            <option value="CE">CE</option>
+            <option value="CH">CH</option>
+            <option value="CS">CS</option>
+            <option value="CY">CY</option>
+            <option value="DS">DS</option>
+            <option value="EC">EC</option>
+            <option value="EE">EE</option>
+            <option value="EI">EI</option>
+            <option value="ET">ET</option>
+            <option value="IE">IE</option>
+            <option value="IM">IM</option>
+            <option value="MD">MD</option>
+            <option value="ME">ME</option>
+            <option value="SE">SE</option>
+            <option value="ST">ST</option>
+            <option value="TX">TX</option>
+        </select>
+        <label for="limit">Search Limit:</label>
+        <input type="number" id="limit" name="limit" placeholder="Enter Search Limit" value="0">
+        <button type="submit">Search Colleges</button>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Information Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .table-container {
+            width: 90%;
+            max-width: 1000px;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1e1e1e;
+            color: #d1d1d1;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background-color: #333333;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #2c2c2c;
+        }
+        
+        tr:hover {
+            background-color: #444444;
+        }
+        
+        caption {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detailed Course Information</h1>
+    <div class="table-container">
+        <table>
+            <caption>Details of Engineering Courses</caption>
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Description</th>
+                    <th>Subjects Covered</th>
+                    <th>Job Opportunities</th>
+                    <th>Career Pathways</th>
+                </tr>
+            </thead>
+            <tbody>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>AD</td>
+                            <td>Artificial Intelligence and Data Science</td>
+                            <td>Focuses on AI and data science principles, covering data analysis, machine learning, and AI applications.</td>
+                            <td>Machine Learning, Data Mining, Neural Networks, Statistics</td>
+                            <td>AI Engineer, Data Scientist, Machine Learning Engineer</td>
+                            <td>Technology, Healthcare, Finance, Research</td>
+                        </tr>
+                        <tr>
+                            <td>AE</td>
+                            <td>Aeronautical Engineering</td>
+                            <td>Deals with the design and development of aircraft and spacecraft.</td>
+                            <td>Fluid Mechanics, Aerodynamics, Propulsion, Aircraft Structures</td>
+                            <td>Aerospace Engineer, Flight Test Engineer, Aircraft Maintenance Engineer</td>
+                            <td>Aerospace, Defense, Research</td>
+                        </tr>
+                        <tr>
+                            <td>AI</td>
+                            <td>Artificial Intelligence</td>
+                            <td>Covers the fundamentals and applications of artificial intelligence technologies.</td>
+                            <td>Machine Learning, Natural Language Processing, Robotics</td>
+                            <td>AI Researcher, AI Consultant, Software Developer</td>
+                            <td>Technology, Research, Manufacturing</td>
+                        </tr>
+                        <tr>
+                            <td>AU</td>
+                            <td>Automobile Engineering</td>
+                            <td>Focuses on the design, development, and manufacturing of automobiles.</td>
+                            <td>Vehicle Dynamics, Engine Design, Automotive Electronics</td>
+                            <td>Automotive Engineer, Design Engineer, Quality Control Engineer</td>
+                            <td>Automotive Industry, Manufacturing, Research</td>
+                        </tr>
+                        <tr>
+                            <td>BT</td>
+                            <td>Biotechnology</td>
+                            <td>Integrates biology and technology for the development of products and services.</td>
+                            <td>Molecular Biology, Biochemistry, Genetic Engineering</td>
+                            <td>Biotech Researcher, Quality Control Analyst, Regulatory Affairs Specialist</td>
+                            <td>Pharmaceuticals, Agriculture, Environmental Science</td>
+                        </tr>
+                        <tr>
+                            <td>CA</td>
+                            <td>Computer Science (AI, Machine Learning)</td>
+                            <td>Covers computer science fundamentals with a focus on AI and machine learning.</td>
+                            <td>Algorithms, Data Structures, Machine Learning, Software Development</td>
+                            <td>Software Engineer, Data Analyst, AI Developer</td>
+                            <td>Technology, Finance, Consulting</td>
+                        </tr>
+                        <tr>
+                            <td>CB</td>
+                            <td>Computer Science and Business Systems</td>
+                            <td>Combines computer science principles with business management.</td>
+                            <td>Information Systems, Database Management, Business Analytics</td>
+                            <td>Systems Analyst, Business Analyst, IT Consultant</td>
+                            <td>Technology, Business, Consulting</td>
+                        </tr>
+                        <tr>
+                            <td>CD</td>
+                            <td>Computer Science and Design</td>
+                            <td>Focuses on the intersection of computer science and user interface design.</td>
+                            <td>UI/UX Design, Software Engineering, Human-Computer Interaction</td>
+                            <td>UI/UX Designer, Front-end Developer, Interaction Designer</td>
+                            <td>Technology, Design, Gaming</td>
+                        </tr>
+                        <tr>
+                            <td>CE</td>
+                            <td>Civil Engineering</td>
+                            <td>Deals with the design, construction, and maintenance of the physical and naturally built environment.</td>
+                            <td>Structural Engineering, Geotechnical Engineering, Transportation Engineering</td>
+                            <td>Civil Engineer, Project Manager, Structural Engineer</td>
+                            <td>Construction, Government, Infrastructure</td>
+                        </tr>
+                        <tr>
+                            <td>CH</td>
+                            <td>Chemical Engineering</td>
+                            <td>Focuses on the processes of converting raw materials into valuable products.</td>
+                            <td>Chemical Reaction Engineering, Process Design, Thermodynamics</td>
+                            <td>Chemical Engineer, Process Engineer, Quality Assurance Engineer</td>
+                            <td>Manufacturing, Pharmaceuticals, Environmental</td>
+                        </tr>
+                        <tr>
+                            <td>CS</td>
+                            <td>Computer Science</td>
+                            <td>Covers the study of algorithms, data structures, software design, and computer systems.</td>
+                            <td>Programming, Data Structures, Operating Systems</td>
+                            <td>Software Developer, System Analyst, Database Administrator</td>
+                            <td>Technology, Finance, Healthcare</td>
+                        </tr>
+                        <tr>
+                            <td>CY</td>
+                            <td>Cyber Security</td>
+                            <td>Focuses on protecting computer systems and networks from information disclosure and theft.</td>
+                            <td>Network Security, Information Assurance, Risk Management</td>
+                            <td>Cyber Security Analyst, Security Consultant, IT Auditor</td>
+                            <td>Technology, Government, Financial Services</td>
+                        </tr>
+                        <tr>
+                            <td>DS</td>
+                            <td>Computer Science Engineering - Data Science</td>
+                            <td>Focuses on data analysis, statistical methods, and data-driven decision-making.</td>
+                            <td>Statistics, Data Mining, Machine Learning</td>
+                            <td>Data Scientist, Data Engineer, Business Intelligence Analyst</td>
+                            <td>Technology, Finance, Healthcare</td>
+                        </tr>
+                        <tr>
+                            <td>EC</td>
+                            <td>Electronics Engineering</td>
+                            <td>Focuses on the design and application of electronic circuits and devices.</td>
+                            <td>Analog and Digital Electronics, Circuit Theory, Signal Processing</td>
+                            <td>Electronics Engineer, Hardware Engineer, Test Engineer</td>
+                            <td>Telecommunications, Consumer Electronics, Aerospace</td>
+                        </tr>
+                        <tr>
+                            <td>EE</td>
+                            <td>Electrical Engineering</td>
+                            <td>Deals with the study and application of electricity, electronics, and electromagnetism.</td>
+                            <td>Circuit Analysis, Power Systems, Control Systems</td>
+                            <td>Electrical Engineer, Power Engineer, Project Engineer</td>
+                            <td>Utilities, Manufacturing, Research</td>
+                        </tr>
+                        <tr>
+                            <td>EI</td>
+                            <td>Electronics and Instrumentation Engineering</td>
+                            <td>Focuses on the design of instruments and control systems for industrial applications.</td>
+                            <td>Measurement Systems, Control Theory, Automation</td>
+                            <td>Instrumentation Engineer, Automation Engineer, Control Systems Engineer</td>
+                            <td>Manufacturing, Oil & Gas, Research</td>
+                        </tr>
+                        <tr>
+                            <td>ET</td>
+                            <td>Electrical and Telecommunication Engineering</td>
+                            <td>Focuses on electrical engineering with an emphasis on telecommunications.</td>
+                            <td>Telecommunication Systems, Network Design, Signal Processing</td>
+                            <td>Telecommunication Engineer, Network Engineer, Systems Engineer</td>
+                            <td>Telecommunications, IT, Media</td>
+                        </tr>
+                        <tr>
+                            <td>IE</td>
+                            <td>Information Science Engineering</td>
+                            <td>Covers the study of data management, information systems, and computing technologies.</td>
+                            <td>Database Systems, Data Warehousing, Information Retrieval</td>
+                            <td>Data Analyst, Information Scientist, Software Developer</td>
+                            <td>Technology, Business, Consulting</td>
+                        </tr>
+                        <tr>
+                            <td>IM</td>
+                            <td>Industrial Engineering and Management</td>
+                            <td>Focuses on optimizing complex processes and systems within organizations.</td>
+                            <td>Operations Research, Supply Chain Management, Quality Control</td>
+                            <td>Industrial Engineer, Operations Manager, Quality Engineer</td>
+                            <td>Manufacturing, Logistics, Consulting</td>
+                        </tr>
+                        <tr>
+                            <td>MD</td>
+                            <td>Medical Electronics</td>
+                            <td>Focuses on electronic devices and systems used in healthcare.</td>
+                            <td>Biomedical Instrumentation, Signal Processing, Medical Imaging</td>
+                            <td>Biomedical Engineer, Medical Device Engineer, Research Scientist</td>
+                            <td>Healthcare, Pharmaceuticals, Research</td>
+                        </tr>
+                        <tr>
+                            <td>ME</td>
+                            <td>Mechanical Engineering</td>
+                            <td>Deals with the design, analysis, and manufacturing of mechanical systems.</td>
+                            <td>Thermodynamics, Fluid Mechanics, Material Science</td>
+                            <td>Mechanical Engineer, Design Engineer, Manufacturing Engineer</td>
+                            <td>Manufacturing, Aerospace, Automotive</td>
+                        </tr>
+                        <tr>
+                            <td>SE</td>
+                            <td>Aerospace Engineering</td>
+                            <td>Focuses on the design and development of aircraft and spacecraft.</td>
+                            <td>Aerodynamics, Propulsion Systems, Structural Analysis</td>
+                            <td>Aerospace Engineer, Flight Test Engineer, Systems Engineer</td>
+                            <td>Aerospace, Defense, Research</td>
+                        </tr>
+                        <tr>
+                            <td>ST</td>
+                            <td>Silk Technology</td>
+                            <td>Deals with the production and processing of silk and its applications.</td>
+                            <td>Silk Production, Textile Processing, Quality Control</td>
+                            <td>Textile Engineer, Quality Analyst, Production Manager</td>
+                            <td>Textiles, Fashion, Manufacturing</td>
+                        </tr>
+                        <tr>
+                            <td>TX</td>
+                            <td>Textiles Engineering</td>
+                            <td>Focuses on the design and manufacturing of textile products.</td>
+                            <td>Textile Science, Fabric Production, Quality Control</td>
+                            <td>Textile Engineer, Production Manager, Quality Analyst</td>
+                            <td>Textiles, Fashion, Manufacturing</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
